@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/tensorflex" />
+  <setParameter name="DefaultConnection-Web.config Connection String" value="Data Source=WIN-NDIKOJQVJ8F;User ID=Mahdi;Password=Tijani1979!" />
+  <setParameter name="TensorflexEntities1-Web.config Connection String" value="metadata=res://*/Models.Tensorflex.csdl|res://*/Models.Tensorflex.ssdl|res://*/Models.Tensorflex.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=WIN-NDIKOJQVJ8F;initial catalog=Tensorflex;user id=Mahdi;password=Tijani1979!;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
+  <setParameter name="TensorflexEntities-Web.config Connection String" value="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=WIN-NDIKOJQVJ8F;Initial Catalog=Tensorflex;User ID=Mahdi;Password=Tijani1979!&quot;" />
+</parameters>

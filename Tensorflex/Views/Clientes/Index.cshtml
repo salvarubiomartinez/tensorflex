@@ -1,0 +1,338 @@
+﻿@model PagedList.IPagedList<Tensorflex.Models.Cliente>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+
+@{
+    ViewBag.Title = "Clientes";
+}
+
+<h2>Clientes</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+
+@using (Html.BeginForm("Index", "Clientes", "FormMethod.Get"))
+{
+    <p>
+        Busca por nombre: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CodigoEmpresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdDelegacion)
+        </th>*@
+        <th>
+            Código
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.SiglaNacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CifDni)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CifEuropeo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaAlta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoProveedor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoContable)
+        </th>*@
+        <th>
+            Razón social
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.RazonSocial2)
+        </th>*@
+        <th>
+            Nombre
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Domicilio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Domicilio2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FormadePago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoBanco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoAgencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CCC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IBAN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoZona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoRuta_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoTransportista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoPortes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ObservacionesCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comentarios)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoSigla)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ViaPublica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Escalera)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Piso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Puerta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Letra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoPostal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoMunicipio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Municipio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ColaMunicipio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoProvincia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Provincia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoNacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HorarioDomicilioLc)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CodigoEmpresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdDelegacion)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoCliente)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.SiglaNacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CifDni)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CifEuropeo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaAlta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoProveedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoContable)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.RazonSocial)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.RazonSocial2)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Domicilio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Domicilio2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FormadePago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoBanco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoAgencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CCC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IBAN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoZona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoRuta_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoTransportista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoPortes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ObservacionesCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comentarios)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoSigla)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ViaPublica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Escalera)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Piso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Puerta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Letra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoPostal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoMunicipio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Municipio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ColaMunicipio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoProvincia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Provincia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoNacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HorarioDomicilioLc)
+        </td>*@
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, currentFilter = ViewBag.CurrentFilter }))

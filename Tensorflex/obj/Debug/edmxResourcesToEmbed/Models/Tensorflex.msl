@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TensorflexModelStoreContainer" CdmEntityContainer="TensorflexEntities1">
+    <EntitySetMapping Name="Albarán">
+      <EntityTypeMapping TypeName="TensorflexModel.Albarán">
+        <MappingFragment StoreEntitySet="Albarán">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CodigoEmpresa" ColumnName="CodigoEmpresa" />
+          <ScalarProperty Name="CodigoCliente" ColumnName="CodigoCliente" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Articulos">
+      <EntityTypeMapping TypeName="TensorflexModel.Articulos">
+        <MappingFragment StoreEntitySet="Articulos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CodigoEmpresa" ColumnName="CodigoEmpresa" />
+          <ScalarProperty Name="CodigoArticulo" ColumnName="CodigoArticulo" />
+          <ScalarProperty Name="DescripcionArticulo" ColumnName="DescripcionArticulo" />
+          <ScalarProperty Name="Descripcion2Articulo" ColumnName="Descripcion2Articulo" />
+          <ScalarProperty Name="CodigoAlternativo" ColumnName="CodigoAlternativo" />
+          <ScalarProperty Name="CodigoAlternativo2" ColumnName="CodigoAlternativo2" />
+          <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+          <ScalarProperty Name="CodigoFamilia" ColumnName="CodigoFamilia" />
+          <ScalarProperty Name="CodigoSubfamilia" ColumnName="CodigoSubfamilia" />
+          <ScalarProperty Name="StockMinimo" ColumnName="StockMinimo" />
+          <ScalarProperty Name="StockMaximo" ColumnName="StockMaximo" />
+          <ScalarProperty Name="PuntoPedido" ColumnName="PuntoPedido" />
+          <ScalarProperty Name="PrecioCompra" ColumnName="PrecioCompra" />
+          <ScalarProperty Name="PrecioVenta" ColumnName="PrecioVenta" />
+          <ScalarProperty Name="C_Margen" ColumnName="%Margen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="TensorflexModel.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CodigoEmpresa" ColumnName="CodigoEmpresa" />
+          <ScalarProperty Name="IdDelegacion" ColumnName="IdDelegacion" />
+          <ScalarProperty Name="CodigoCliente" ColumnName="CodigoCliente" />
+          <ScalarProperty Name="SiglaNacion" ColumnName="SiglaNacion" />
+          <ScalarProperty Name="CifDni" ColumnName="CifDni" />
+          <ScalarProperty Name="CifEuropeo" ColumnName="CifEuropeo" />
+          <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+          <ScalarProperty Name="CodigoProveedor" ColumnName="CodigoProveedor" />
+          <ScalarProperty Name="CodigoContable" ColumnName="CodigoContable" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="RazonSocial2" ColumnName="RazonSocial2" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Domicilio" ColumnName="Domicilio" />
+          <ScalarProperty Name="Domicilio2" ColumnName="Domicilio2" />
+          <ScalarProperty Name="Nombre1" ColumnName="Nombre1" />
+          <ScalarProperty Name="FormadePago" ColumnName="FormadePago" />
+          <ScalarProperty Name="CodigoBanco" ColumnName="CodigoBanco" />
+          <ScalarProperty Name="CodigoAgencia" ColumnName="CodigoAgencia" />
+          <ScalarProperty Name="DC" ColumnName="DC" />
+          <ScalarProperty Name="CCC" ColumnName="CCC" />
+          <ScalarProperty Name="IBAN" ColumnName="IBAN" />
+          <ScalarProperty Name="CodigoZona" ColumnName="CodigoZona" />
+          <ScalarProperty Name="CodigoRuta_" ColumnName="CodigoRuta_" />
+          <ScalarProperty Name="CodigoTransportista" ColumnName="CodigoTransportista" />
+          <ScalarProperty Name="TipoPortes" ColumnName="TipoPortes" />
+          <ScalarProperty Name="ObservacionesCliente" ColumnName="ObservacionesCliente" />
+          <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+          <ScalarProperty Name="CodigoSigla" ColumnName="CodigoSigla" />
+          <ScalarProperty Name="ViaPublica" ColumnName="ViaPublica" />
+          <ScalarProperty Name="Numero1" ColumnName="Numero1" />
+          <ScalarProperty Name="Numero2" ColumnName="Numero2" />
+          <ScalarProperty Name="Escalera" ColumnName="Escalera" />
+          <ScalarProperty Name="Piso" ColumnName="Piso" />
+          <ScalarProperty Name="Puerta" ColumnName="Puerta" />
+          <ScalarProperty Name="Letra" ColumnName="Letra" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+          <ScalarProperty Name="CodigoMunicipio" ColumnName="CodigoMunicipio" />
+          <ScalarProperty Name="Municipio" ColumnName="Municipio" />
+          <ScalarProperty Name="ColaMunicipio" ColumnName="ColaMunicipio" />
+          <ScalarProperty Name="CodigoProvincia" ColumnName="CodigoProvincia" />
+          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+          <ScalarProperty Name="CodigoNacion" ColumnName="CodigoNacion" />
+          <ScalarProperty Name="Nacion" ColumnName="Nacion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+          <ScalarProperty Name="Telefono3" ColumnName="Telefono3" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email1" ColumnName="Email1" />
+          <ScalarProperty Name="HorarioDomicilioLc" ColumnName="HorarioDomicilioLc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LineaAlbaran">
+      <EntityTypeMapping TypeName="TensorflexModel.LineaAlbaran">
+        <MappingFragment StoreEntitySet="LineaAlbaran">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AlbaranId" ColumnName="AlbaranId" />
+          <ScalarProperty Name="CodigoEmpresa" ColumnName="CodigoEmpresa" />
+          <ScalarProperty Name="CodigoArticulo" ColumnName="CodigoArticulo" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

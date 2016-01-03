@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>TENSORFLEX</h1>
+    <p class="lead">Bienvenido a la aplicación de albaranes.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Clientes</h2>
+        <p>Gestione sus clientes
+        </p>
+        <p>@Html.ActionLink("Clientes", "Index", "Clientes")</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Artículos</h2>
+        <p>Gestione sus artículos</p>
+        <p>@Html.ActionLink("Artículos", "Index", "Articuloes")</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Albaranes</h2>
+        <p>Gestione sus albaranes</p>
+        <p>@Html.ActionLink("Albarán", "Index", "Albarán")</p>
+    </div>
+</div>

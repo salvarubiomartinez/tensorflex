@@ -1,0 +1,133 @@
+﻿@model PagedList.IPagedList<Tensorflex.Models.Articulo>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Articulos";
+}
+
+<h2>Articulos</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+
+@using (Html.BeginForm("Index","Articuloes","FormMethod.Get"))
+{
+    <p>
+        Busca por nombre: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CodigoEmpresa)
+        </th>*@
+        <th>
+            Codigo
+        </th>
+        <th>
+            Descripción
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Descripcion2Articulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoAlternativo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoAlternativo2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaAlta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoFamilia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoSubfamilia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StockMinimo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StockMaximo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PuntoPedido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioCompra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioVenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_Margen)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CodigoEmpresa)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoArticulo)
+        </td>
+       <td>
+            @Html.DisplayFor(modelItem => item.DescripcionArticulo)
+        </td>
+        @*<td>
+        @Html.DisplayFor(modelItem => item.Descripcion2Articulo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CodigoAlternativo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CodigoAlternativo2)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FechaAlta)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CodigoFamilia)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CodigoSubfamilia)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StockMinimo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StockMaximo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PuntoPedido)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PrecioCompra)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PrecioVenta)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.C_Margen)
+    </td>*@
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, currentFilter = ViewBag.CurrentFilter }))

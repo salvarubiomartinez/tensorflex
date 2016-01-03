@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TensorflexDatabase", "TensorflexDatabase\TensorflexDatabase.sqlproj", "{A3D0A5A4-8A36-44B0-946F-0ECDA4B3C492}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tensorflex", "Tensorflex\Tensorflex.csproj", "{FFFD6E5E-678B-4444-8794-0C8C9D21230E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3D0A5A4-8A36-44B0-946F-0ECDA4B3C492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D0A5A4-8A36-44B0-946F-0ECDA4B3C492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D0A5A4-8A36-44B0-946F-0ECDA4B3C492}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A3D0A5A4-8A36-44B0-946F-0ECDA4B3C492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D0A5A4-8A36-44B0-946F-0ECDA4B3C492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D0A5A4-8A36-44B0-946F-0ECDA4B3C492}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FFFD6E5E-678B-4444-8794-0C8C9D21230E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFFD6E5E-678B-4444-8794-0C8C9D21230E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFFD6E5E-678B-4444-8794-0C8C9D21230E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFFD6E5E-678B-4444-8794-0C8C9D21230E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

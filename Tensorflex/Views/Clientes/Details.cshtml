@@ -1,0 +1,410 @@
+﻿@model Tensorflex.Models.Cliente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoEmpresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoEmpresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdDelegacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdDelegacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SiglaNacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SiglaNacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CifDni)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CifDni)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CifEuropeo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CifEuropeo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaAlta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaAlta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoProveedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoProveedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoContable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoContable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RazonSocial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RazonSocial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RazonSocial2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RazonSocial2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Domicilio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Domicilio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Domicilio2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Domicilio2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormadePago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormadePago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoBanco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoBanco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoAgencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoAgencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CCC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IBAN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IBAN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoZona)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoZona)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoRuta_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoRuta_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoTransportista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoTransportista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPortes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPortes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ObservacionesCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ObservacionesCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comentarios)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comentarios)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoSigla)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoSigla)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ViaPublica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ViaPublica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Escalera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Escalera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Piso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Piso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Puerta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Puerta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Letra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Letra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoPostal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoPostal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoMunicipio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoMunicipio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Municipio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Municipio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ColaMunicipio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColaMunicipio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoProvincia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoProvincia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Provincia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Provincia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoNacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoNacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HorarioDomicilioLc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HorarioDomicilioLc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

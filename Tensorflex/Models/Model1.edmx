@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TensorflexModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Albarán">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClienteId" Type="int" Nullable="false" />
+          <Property Name="Fecha" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Articulos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="CodigoEmpresa" Type="smallint" />
+          <Property Name="CodigoArticulo" Type="varchar" MaxLength="20" />
+          <Property Name="DescripcionArticulo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Descripcion2Articulo" Type="varchar" MaxLength="40" />
+          <Property Name="CodigoAlternativo" Type="varchar" MaxLength="20" />
+          <Property Name="CodigoAlternativo2" Type="varchar" MaxLength="20" />
+          <Property Name="FechaAlta" Type="datetime" />
+          <Property Name="CodigoFamilia" Type="varchar" MaxLength="10" />
+          <Property Name="CodigoSubfamilia" Type="varchar" MaxLength="10" />
+          <Property Name="StockMinimo" Type="decimal" Precision="28" Scale="10" />
+          <Property Name="StockMaximo" Type="decimal" Precision="28" Scale="10" />
+          <Property Name="PuntoPedido" Type="decimal" Precision="28" Scale="10" />
+          <Property Name="PrecioCompra" Type="decimal" Precision="28" Scale="10" />
+          <Property Name="PrecioVenta" Type="decimal" Precision="28" Scale="10" />
+          <Property Name="%Margen" Type="decimal" Precision="28" Scale="10" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Clientes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="CodigoEmpresa" Type="smallint" />
+          <Property Name="IdDelegacion" Type="varchar" MaxLength="10" />
+          <Property Name="CodigoCliente" Type="varchar" MaxLength="15" />
+          <Property Name="SiglaNacion" Type="varchar" MaxLength="2" />
+          <Property Name="CifDni" Type="varchar" MaxLength="13" />
+          <Property Name="CifEuropeo" Type="varchar" MaxLength="15" />
+          <Property Name="FechaAlta" Type="datetime" />
+          <Property Name="CodigoProveedor" Type="varchar" MaxLength="15" />
+          <Property Name="CodigoContable" Type="varchar" MaxLength="15" />
+          <Property Name="RazonSocial" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="RazonSocial2" Type="varchar" MaxLength="40" />
+          <Property Name="Nombre" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="Domicilio" Type="varchar" MaxLength="40" />
+          <Property Name="Domicilio2" Type="varchar" MaxLength="40" />
+          <Property Name="Nombre1" Type="varchar" MaxLength="30" />
+          <Property Name="FormadePago" Type="varchar" MaxLength="35" />
+          <Property Name="CodigoBanco" Type="varchar" MaxLength="10" />
+          <Property Name="CodigoAgencia" Type="varchar" MaxLength="6" />
+          <Property Name="DC" Type="varchar" MaxLength="2" />
+          <Property Name="CCC" Type="varchar" MaxLength="15" />
+          <Property Name="IBAN" Type="varchar" MaxLength="34" />
+          <Property Name="CodigoZona" Type="int" />
+          <Property Name="CodigoRuta_" Type="varchar" MaxLength="10" />
+          <Property Name="CodigoTransportista" Type="int" />
+          <Property Name="TipoPortes" Type="varchar" MaxLength="1" />
+          <Property Name="ObservacionesCliente" Type="varchar" MaxLength="50" />
+          <Property Name="Comentarios" Type="text" />
+          <Property Name="CodigoSigla" Type="varchar" MaxLength="2" />
+          <Property Name="ViaPublica" Type="varchar" MaxLength="40" />
+          <Property Name="Numero1" Type="varchar" MaxLength="4" />
+          <Property Name="Numero2" Type="varchar" MaxLength="4" />
+          <Property Name="Escalera" Type="varchar" MaxLength="2" />
+          <Property Name="Piso" Type="varchar" MaxLength="2" />
+          <Property Name="Puerta" Type="varchar" MaxLength="2" />
+          <Property Name="Letra" Type="varchar" MaxLength="2" />
+          <Property Name="CodigoPostal" Type="varchar" MaxLength="8" />
+          <Property Name="CodigoMunicipio" Type="varchar" MaxLength="7" />
+          <Property Name="Municipio" Type="varchar" MaxLength="25" />
+          <Property Name="ColaMunicipio" Type="varchar" MaxLength="15" />
+          <Property Name="CodigoProvincia" Type="varchar" MaxLength="5" />
+          <Property Name="Provincia" Type="varchar" MaxLength="20" />
+          <Property Name="CodigoNacion" Type="smallint" />
+          <Property Name="Nacion" Type="varchar" MaxLength="25" />
+          <Property Name="Telefono" Type="varchar" MaxLength="15" />
+          <Property Name="Telefono2" Type="varchar" MaxLength="15" />
+          <Property Name="Telefono3" Type="varchar" MaxLength="15" />
+          <Property Name="Fax" Type="varchar" MaxLength="15" />
+          <Property Name="Email1" Type="varchar" MaxLength="250" />
+          <Property Name="HorarioDomicilioLc" Type="varchar" MaxLength="100" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LineaAlbaran">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AlbaranId" Type="int" Nullable="false" />
+          <Property Name="ArticuloId" Type="int" Nullable="false" />
+          <Property Name="Cantidad" Type="int" Nullable="false" />
+          <Property Name="Precio" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Albaran">
+          <End Role="Albarán" Type="Self.Albarán" Multiplicity="1" />
+          <End Role="LineaAlbaran" Type="Self.LineaAlbaran" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Albarán">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LineaAlbaran">
+              <PropertyRef Name="AlbaranId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Tensorflex_dbo_Articulos_ArticuloID">
+          <End Role="Articulos" Type="Self.Articulos" Multiplicity="1" />
+          <End Role="LineaAlbaran" Type="Self.LineaAlbaran" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articulos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="LineaAlbaran">
+              <PropertyRef Name="ArticuloId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Tensorflex_dbo_Clientes_ID">
+          <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+          <End Role="Albarán" Type="Self.Albarán" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Albarán">
+              <PropertyRef Name="ClienteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TensorflexModelStoreContainer">
+          <EntitySet Name="Albarán" EntityType="Self.Albarán" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Articulos" EntityType="Self.Articulos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LineaAlbaran" EntityType="Self.LineaAlbaran" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Albaran" Association="Self.FK_Albaran">
+            <End Role="Albarán" EntitySet="Albarán" />
+            <End Role="LineaAlbaran" EntitySet="LineaAlbaran" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Tensorflex_dbo_Articulos_ArticuloID" Association="Self.FK_dbo_Tensorflex_dbo_Articulos_ArticuloID">
+            <End Role="Articulos" EntitySet="Articulos" />
+            <End Role="LineaAlbaran" EntitySet="LineaAlbaran" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Tensorflex_dbo_Clientes_ID" Association="Self.FK_dbo_Tensorflex_dbo_Clientes_ID">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Albarán" EntitySet="Albarán" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TensorflexModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Albarán">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClienteId" Type="Int32" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="LineaAlbarans" Relationship="Self.FK_Albaran" FromRole="Albarán" ToRole="LineaAlbaran" />
+          <NavigationProperty Name="Cliente" Relationship="Self.FK_dbo_Tensorflex_dbo_Clientes_ID" FromRole="Albarán" ToRole="Clientes" />
+        </EntityType>
+        <EntityType Name="Articulo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="CodigoEmpresa" Type="Int16" />
+          <Property Name="CodigoArticulo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DescripcionArticulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descripcion2Articulo" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoAlternativo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoAlternativo2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FechaAlta" Type="DateTime" Precision="3" />
+          <Property Name="CodigoFamilia" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoSubfamilia" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="StockMinimo" Type="Decimal" Precision="28" Scale="10" />
+          <Property Name="StockMaximo" Type="Decimal" Precision="28" Scale="10" />
+          <Property Name="PuntoPedido" Type="Decimal" Precision="28" Scale="10" />
+          <Property Name="PrecioCompra" Type="Decimal" Precision="28" Scale="10" />
+          <Property Name="PrecioVenta" Type="Decimal" Precision="28" Scale="10" />
+          <Property Name="C_Margen" Type="Decimal" Precision="28" Scale="10" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="LineaAlbarans" Relationship="Self.FK_dbo_Tensorflex_dbo_Articulos_ArticuloID" FromRole="Articulos" ToRole="LineaAlbaran" />
+        </EntityType>
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="CodigoEmpresa" Type="Int16" />
+          <Property Name="IdDelegacion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoCliente" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="SiglaNacion" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CifDni" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="CifEuropeo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="FechaAlta" Type="DateTime" Precision="3" />
+          <Property Name="CodigoProveedor" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoContable" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="RazonSocial" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RazonSocial2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Domicilio" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Domicilio2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FormadePago" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoBanco" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoAgencia" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="DC" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CCC" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="IBAN" Type="String" MaxLength="34" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoZona" Type="Int32" />
+          <Property Name="CodigoRuta_" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoTransportista" Type="Int32" />
+          <Property Name="TipoPortes" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ObservacionesCliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Comentarios" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoSigla" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ViaPublica" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Numero1" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Numero2" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Escalera" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Piso" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Puerta" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Letra" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoPostal" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoMunicipio" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="Municipio" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="ColaMunicipio" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoProvincia" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Provincia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoNacion" Type="Int16" />
+          <Property Name="Nacion" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono3" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Email1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="HorarioDomicilioLc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Albarán" Relationship="Self.FK_dbo_Tensorflex_dbo_Clientes_ID" FromRole="Clientes" ToRole="Albarán" />
+        </EntityType>
+        <EntityType Name="LineaAlbaran">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AlbaranId" Type="Int32" Nullable="false" />
+          <Property Name="ArticuloId" Type="Int32" Nullable="false" />
+          <Property Name="Cantidad" Type="Int32" Nullable="false" />
+          <Property Name="Precio" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <NavigationProperty Name="Albarán" Relationship="Self.FK_Albaran" FromRole="LineaAlbaran" ToRole="Albarán" />
+          <NavigationProperty Name="Articulo" Relationship="Self.FK_dbo_Tensorflex_dbo_Articulos_ArticuloID" FromRole="LineaAlbaran" ToRole="Articulos" />
+        </EntityType>
+        <Association Name="FK_Albaran">
+          <End Role="Albarán" Type="Self.Albarán" Multiplicity="1" />
+          <End Role="LineaAlbaran" Type="Self.LineaAlbaran" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Albarán">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LineaAlbaran">
+              <PropertyRef Name="AlbaranId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Tensorflex_dbo_Clientes_ID">
+          <End Role="Clientes" Type="Self.Cliente" Multiplicity="1" />
+          <End Role="Albarán" Type="Self.Albarán" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Albarán">
+              <PropertyRef Name="ClienteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Tensorflex_dbo_Articulos_ArticuloID">
+          <End Role="Articulos" Type="Self.Articulo" Multiplicity="1" />
+          <End Role="LineaAlbaran" Type="Self.LineaAlbaran" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articulos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="LineaAlbaran">
+              <PropertyRef Name="ArticuloId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TensorflexEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Albarán" EntityType="Self.Albarán" />
+          <EntitySet Name="Articulos" EntityType="Self.Articulo" />
+          <EntitySet Name="Clientes" EntityType="Self.Cliente" />
+          <EntitySet Name="LineaAlbarans" EntityType="Self.LineaAlbaran" />
+          <AssociationSet Name="FK_Albaran" Association="Self.FK_Albaran">
+            <End Role="Albarán" EntitySet="Albarán" />
+            <End Role="LineaAlbaran" EntitySet="LineaAlbarans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Tensorflex_dbo_Clientes_ID" Association="Self.FK_dbo_Tensorflex_dbo_Clientes_ID">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Albarán" EntitySet="Albarán" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Tensorflex_dbo_Articulos_ArticuloID" Association="Self.FK_dbo_Tensorflex_dbo_Articulos_ArticuloID">
+            <End Role="Articulos" EntitySet="Articulos" />
+            <End Role="LineaAlbaran" EntitySet="LineaAlbarans" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TensorflexModelStoreContainer" CdmEntityContainer="TensorflexEntities">
+          <EntitySetMapping Name="Albarán">
+            <EntityTypeMapping TypeName="TensorflexModel.Albarán">
+              <MappingFragment StoreEntitySet="Albarán">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClienteId" ColumnName="ClienteId" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Articulos">
+            <EntityTypeMapping TypeName="TensorflexModel.Articulo">
+              <MappingFragment StoreEntitySet="Articulos">
+                <ScalarProperty Name="CodigoEmpresa" ColumnName="CodigoEmpresa" />
+                <ScalarProperty Name="CodigoArticulo" ColumnName="CodigoArticulo" />
+                <ScalarProperty Name="DescripcionArticulo" ColumnName="DescripcionArticulo" />
+                <ScalarProperty Name="Descripcion2Articulo" ColumnName="Descripcion2Articulo" />
+                <ScalarProperty Name="CodigoAlternativo" ColumnName="CodigoAlternativo" />
+                <ScalarProperty Name="CodigoAlternativo2" ColumnName="CodigoAlternativo2" />
+                <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+                <ScalarProperty Name="CodigoFamilia" ColumnName="CodigoFamilia" />
+                <ScalarProperty Name="CodigoSubfamilia" ColumnName="CodigoSubfamilia" />
+                <ScalarProperty Name="StockMinimo" ColumnName="StockMinimo" />
+                <ScalarProperty Name="StockMaximo" ColumnName="StockMaximo" />
+                <ScalarProperty Name="PuntoPedido" ColumnName="PuntoPedido" />
+                <ScalarProperty Name="PrecioCompra" ColumnName="PrecioCompra" />
+                <ScalarProperty Name="PrecioVenta" ColumnName="PrecioVenta" />
+                <ScalarProperty Name="C_Margen" ColumnName="%Margen" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clientes">
+            <EntityTypeMapping TypeName="TensorflexModel.Cliente">
+              <MappingFragment StoreEntitySet="Clientes">
+                <ScalarProperty Name="CodigoEmpresa" ColumnName="CodigoEmpresa" />
+                <ScalarProperty Name="IdDelegacion" ColumnName="IdDelegacion" />
+                <ScalarProperty Name="CodigoCliente" ColumnName="CodigoCliente" />
+                <ScalarProperty Name="SiglaNacion" ColumnName="SiglaNacion" />
+                <ScalarProperty Name="CifDni" ColumnName="CifDni" />
+                <ScalarProperty Name="CifEuropeo" ColumnName="CifEuropeo" />
+                <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+                <ScalarProperty Name="CodigoProveedor" ColumnName="CodigoProveedor" />
+                <ScalarProperty Name="CodigoContable" ColumnName="CodigoContable" />
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+                <ScalarProperty Name="RazonSocial2" ColumnName="RazonSocial2" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Domicilio" ColumnName="Domicilio" />
+                <ScalarProperty Name="Domicilio2" ColumnName="Domicilio2" />
+                <ScalarProperty Name="Nombre1" ColumnName="Nombre1" />
+                <ScalarProperty Name="FormadePago" ColumnName="FormadePago" />
+                <ScalarProperty Name="CodigoBanco" ColumnName="CodigoBanco" />
+                <ScalarProperty Name="CodigoAgencia" ColumnName="CodigoAgencia" />
+                <ScalarProperty Name="DC" ColumnName="DC" />
+                <ScalarProperty Name="CCC" ColumnName="CCC" />
+                <ScalarProperty Name="IBAN" ColumnName="IBAN" />
+                <ScalarProperty Name="CodigoZona" ColumnName="CodigoZona" />
+                <ScalarProperty Name="CodigoRuta_" ColumnName="CodigoRuta_" />
+                <ScalarProperty Name="CodigoTransportista" ColumnName="CodigoTransportista" />
+                <ScalarProperty Name="TipoPortes" ColumnName="TipoPortes" />
+                <ScalarProperty Name="ObservacionesCliente" ColumnName="ObservacionesCliente" />
+                <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+                <ScalarProperty Name="CodigoSigla" ColumnName="CodigoSigla" />
+                <ScalarProperty Name="ViaPublica" ColumnName="ViaPublica" />
+                <ScalarProperty Name="Numero1" ColumnName="Numero1" />
+                <ScalarProperty Name="Numero2" ColumnName="Numero2" />
+                <ScalarProperty Name="Escalera" ColumnName="Escalera" />
+                <ScalarProperty Name="Piso" ColumnName="Piso" />
+                <ScalarProperty Name="Puerta" ColumnName="Puerta" />
+                <ScalarProperty Name="Letra" ColumnName="Letra" />
+                <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+                <ScalarProperty Name="CodigoMunicipio" ColumnName="CodigoMunicipio" />
+                <ScalarProperty Name="Municipio" ColumnName="Municipio" />
+                <ScalarProperty Name="ColaMunicipio" ColumnName="ColaMunicipio" />
+                <ScalarProperty Name="CodigoProvincia" ColumnName="CodigoProvincia" />
+                <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+                <ScalarProperty Name="CodigoNacion" ColumnName="CodigoNacion" />
+                <ScalarProperty Name="Nacion" ColumnName="Nacion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+                <ScalarProperty Name="Telefono3" ColumnName="Telefono3" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Email1" ColumnName="Email1" />
+                <ScalarProperty Name="HorarioDomicilioLc" ColumnName="HorarioDomicilioLc" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LineaAlbarans">
+            <EntityTypeMapping TypeName="TensorflexModel.LineaAlbaran">
+              <MappingFragment StoreEntitySet="LineaAlbaran">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AlbaranId" ColumnName="AlbaranId" />
+                <ScalarProperty Name="ArticuloId" ColumnName="ArticuloId" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

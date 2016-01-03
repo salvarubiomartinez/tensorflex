@@ -1,0 +1,138 @@
+﻿@model Tensorflex.Models.Articulo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Articulo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoEmpresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoEmpresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoArticulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoArticulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescripcionArticulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescripcionArticulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion2Articulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion2Articulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoAlternativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoAlternativo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoAlternativo2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoAlternativo2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaAlta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaAlta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoFamilia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoFamilia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoSubfamilia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoSubfamilia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StockMinimo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockMinimo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StockMaximo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockMaximo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PuntoPedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PuntoPedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecioCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecioCompra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecioVenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecioVenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C_Margen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_Margen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
